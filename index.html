@@ -196,37 +196,37 @@
                     <!-- Tab Navigation -->
                     <div class="lg:col-span-1 border-gray-200 bg-gray-50 lg:border-r overflow-x-auto scrollbar-hide">
                         <div class="flex lg:flex-col flex-row lg:space-y-1 space-y-0 space-x-2 lg:space-x-0 p-4 min-w-max">
-                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 active-tab rounded-lg whitespace-nowrap flex-shrink-0" data-tab="billing">
+                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0 border-b-2 border-transparent lg:border-l-4 lg:border-l-transparent lg:border-b-0 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:z-10 hover:bg-slate-100 hover:shadow hover:scale-[1.03] hover:border-blue-600 border-1 active-tab border-blue-600 bg-slate-200 text-blue-700" data-tab="billing">
                                 <div class="flex items-center space-x-3 justify-center lg:justify-start">
                                     <i class="fa-solid fa-credit-card text-lg text-blue-600"></i>
                                     <span class="font-medium text-gray-900 text-sm">Billing & Counter Management</span>
                                 </div>
                             </button>
-                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0" data-tab="inventory">
+                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0 border-b-2 border-transparent lg:border-l-4 lg:border-l-transparent lg:border-b-0 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:z-10 hover:bg-slate-100 hover:shadow hover:scale-[1.03] hover:border-blue-600  border-1 " data-tab="inventory">
                                 <div class="flex items-center space-x-3 justify-center lg:justify-start">
                                     <i class="fa-solid fa-box-archive text-lg text-green-600"></i>
                                     <span class="font-medium text-gray-900 text-sm">Inventory & Stock Control</span>
                                 </div>
                             </button>
-                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0" data-tab="customer">
+                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0 border-b-2 border-transparent lg:border-l-4 lg:border-l-transparent lg:border-b-0 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:z-10 hover:bg-slate-100 hover:shadow hover:scale-[1.03] hover:border-blue-600  border-1" data-tab="customer">
                                 <div class="flex items-center space-x-3 justify-center lg:justify-start">
                                     <i class="fa-solid fa-users text-lg text-purple-600"></i>
                                     <span class="font-medium text-gray-900 text-sm">Customer & CRM Tools</span>
                                 </div>
                             </button>
-                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0" data-tab="sales">
+                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0 border-b-2 border-transparent lg:border-l-4 lg:border-l-transparent lg:border-b-0 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:z-10 hover:bg-slate-100 hover:shadow hover:scale-[1.03] hover:border-blue-600  border-1" data-tab="sales">
                                 <div class="flex items-center space-x-3 justify-center lg:justify-start">
                                     <i class="fa-solid fa-chart-line text-lg text-orange-600"></i>
                                     <span class="font-medium text-gray-900 text-sm">Sales & Reports</span>
                                 </div>
                             </button>
-                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0" data-tab="security">
+                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0 border-b-2 border-transparent lg:border-l-4 lg:border-l-transparent lg:border-b-0 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:z-10 hover:bg-slate-100 hover:shadow hover:scale-[1.03] hover:border-blue-600  border-1" data-tab="security">
                                 <div class="flex items-center space-x-3 justify-center lg:justify-start">
                                     <i class="fa-solid fa-shield-halved text-lg text-red-600"></i>
                                     <span class="font-medium text-gray-900 text-sm">User Control & Security</span>
                                 </div>
                             </button>
-                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0" data-tab="support">
+                            <button class="feature-tab w-full lg:text-left text-center p-4 transition-all duration-200 rounded-lg whitespace-nowrap flex-shrink-0 border-b-2 border-transparent lg:border-l-4 lg:border-l-transparent lg:border-b-0 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:z-10 hover:bg-slate-100 hover:shadow hover:scale-[1.03] hover:border-blue-600  border-1" data-tab="support">
                                 <div class="flex items-center space-x-3 justify-center lg:justify-start">
                                     <i class="fa-solid fa-heart text-lg text-teal-600"></i>
                                     <span class="font-medium text-gray-900 text-sm">Ease of Use & Support</span>
@@ -614,27 +614,25 @@
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
                     const targetTab = button.getAttribute('data-tab');
-                    
-                    // Remove active class from all tabs and contents
+                    // Remove active class from all tabs
                     tabButtons.forEach(btn => {
-                        btn.classList.remove('active-tab');
+                        btn.classList.remove('active-tab', 'border-blue-600', 'bg-slate-200', 'shadow-sm', 'text-blue-700');
+                        btn.classList.add('border-transparent');
                     });
-                    
+                    // Hide all tab contents
                     tabContents.forEach(content => {
                         content.classList.remove('active');
                         content.classList.add('hidden');
                     });
-
-                    // Add active class to clicked tab
-                    button.classList.add('active-tab');
-                    
+                    // Add active class and accent border to clicked tab
+                    button.classList.add('active-tab', 'border-blue-600', 'bg-slate-200', 'shadow-sm', 'text-blue-700');
+                    button.classList.remove('border-transparent');
                     // Show corresponding content
                     const targetContent = document.getElementById(targetTab + '-content');
                     if (targetContent) {
                         targetContent.classList.remove('hidden');
                         targetContent.classList.add('active');
                     }
-
                     // Mobile: Scroll tab into view on mobile
                     if (window.innerWidth < 1024) {
                         button.scrollIntoView({ 
@@ -650,7 +648,6 @@
             tabButtons.forEach((button, index) => {
                 button.addEventListener('keydown', (e) => {
                     let newIndex;
-                    
                     switch(e.key) {
                         case 'ArrowLeft':
                         case 'ArrowUp':
@@ -681,7 +678,6 @@
                 button.setAttribute('tabindex', index === 0 ? '0' : '-1');
                 button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
             });
-
             tabContents.forEach((content, index) => {
                 content.setAttribute('role', 'tabpanel');
                 content.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
