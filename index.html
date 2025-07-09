@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kassapos - Supermarket Billing Software</title>
+    <meta name="title" content="Billing software used by 1000+ supermarkets in Tamilnadu | Kassapos">
+    <meta name="description" content="Kassapos helps 1000+ Indian Supermarkets & retailers automate billing, track sales, manage stock, Multi location store tracking and access everything.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Billing software used by 1000+ supermarkets in Tamilnadu | Kassapos">
+    <meta property="og:description" content="Kassapos helps 1000+ Indian Supermarkets & retailers automate billing, track sales, manage stock, Multi location store tracking and access everything.">
+    <meta property="og:image" content="https://www.kassapos.in/images/og/kassapos-og-banner.jpg">
+    <meta property="og:url" content="https://www.kassapos.in/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Billing software used by 1000+ supermarkets in Tamilnadu | Kassapos">
+    <meta name="twitter:description" content="Kassapos helps 1000+ Indian Supermarkets & retailers automate billing, track sales, manage stock, Multi location store tracking and access everything.">
+    <meta name="twitter:image" content="https://www.kassapos.in/images/og/kassapos-og-banner.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
@@ -65,7 +80,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-center md:text-left">
                     <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-primary/80 mb-6 bg-blue-100 text-blue-800 border-blue-200">
-                        🎨 🛠️ Proudly designed, supported &  developed in Tamil Nadu
+                        🛠️ Proudly designed, supported &  developed in Tamil Nadu
                     </span>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                         Fast, Easy, Reliable Billing Software for <br> <span class="text-blue-600">Busy Supermarkets</span>
@@ -79,12 +94,16 @@
                         </a>
                     </div>
                     <div class="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
-                        <span class="text-sm text-red-600 font-medium">No credit card </span>
-                        <span class="text-sm text-red-600 font-medium">No processing fee</span>
+                        <span class="text-sm text-green-700 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check text-green-500 text-lg"></i> No credit card
+                        </span>
+                        <span class="text-sm text-green-700 font-medium flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check text-green-500 text-lg"></i> No processing fee
+                        </span>
                     </div>
                 </div>
                 <div>
-                    <img src="https://placehold.co/600x400/e0e7ff/3b82f6?text=Supermarket+Billing+in+Action" alt="Images of big supermarket openings" class="rounded-xl shadow-2xl w-full h-auto">
+                    <img src="/images/hero.webp" alt="Images of big supermarket openings" class="rounded-xl shadow-2xl w-full h-auto">
                 </div>
             </div>
         </div>
@@ -118,16 +137,16 @@
                 </p>
             </div>
             <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:scale-105">
-                    <img src="/images/pondycmshopopening.webp" alt="Supermarket opening ceremony" class="w-full md:w-1/2  md:h-auto object-cover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:scale-105 md:h-[500px] max-h-[500px]" >
+                    <video src="/images/pondycm.mp4" class="w-full md:w-1/2 md:h-auto object-cover" controls muted playsinline poster="/images/pondycmshopopening.webp"></video>
                     <div class="p-8 flex flex-col justify-center">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Honorable Pondicherry's CM at Grand Opening</h3>
                         <p class="text-gray-600 mb-4">Location: Pondicherry<br>Name: FreshMart Supermarket</p>
                         <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Flagship Launch</span>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:scale-105">
-                    <img src="/images/kallakurichisupermarket.webp" alt="New store opening" class="w-full md:w-1/2  md:h-auto object-cover">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row transition-transform duration-300 hover:scale-105 md:h-[500px] max-h-[500px]">
+                    <video src="/images/shobana.mp4" class="w-full md:w-1/2 md:h-auto object-cover" controls muted playsinline poster="/images/kallakurichisupermarket.webp"></video>
                     <div class="p-8 flex flex-col justify-center">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Kallakurichi New Store Opening</h3>
                         <p class="text-gray-600 mb-4">Location: Kallakurichi<br>Name: MegaStore Groceries</p>
@@ -500,16 +519,7 @@
         </div>
     </section>
 
-    <!-- Long-term Customer Section -->
-    <section id="longterm" class="py-24 bg-white fade-in">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Trusted by Supermarkets for Over 7+ Years
-                </h2>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Reviews Section -->
     <section id="reviews" class="py-24 bg-gray-50 fade-in">
@@ -607,13 +617,17 @@
             <p class="text-xl mb-10 opacity-90">
                 Explore Kassapos without paying a single rupee. Book Your Free Demo in Just 15 Seconds.
             </p>
-            <div class="my-6 flex flex-wrap gap-4 justify-center ">
-                        <span class="text-sm   font-medium">No credit card </span>
-                        <span class="text-sm  font-medium">No processing fee</span>
-                    </div>
             <a href="#" class="bg-white text-blue-600 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg mb-8 inline-block">
                 Book My Demo
             </a>
+            <div class="mb-6 mt-2 flex flex-wrap gap-4 justify-center ">
+                <span class="text-sm text-white font-medium flex items-center gap-1">
+                    <i class="fa-solid fa-circle-check text-blue-500 text-lg"></i> No credit card
+                </span>
+                <span class="text-sm text-white font-medium flex items-center gap-1">
+                    <i class="fa-solid fa-circle-check text-blue-500 text-lg"></i> No processing fee
+                </span>
+            </div>
             <p class="text-blue-100 font-medium">Proudly designed, supported & developed in Tamil Nadu</p>
         </div>
     </section>
@@ -625,7 +639,9 @@
                 <div class="md:col-span-2">
                     <div class="flex items-center mb-4">
                         <div class="flex items-center">
-                            <img src="/images/kassaposlogo.png" width="189px" height="64px" alt="Kassapos Logo" class="h-16 mr-3">
+                            <a href="https://www.kassapos.in">
+                                <img src="/images/kassaposlogo.png" width="189px" height="64px" alt="Kassapos Logo" class="h-16 mr-3">
+                            </a>
                         </div>
                     </div>
                     <p class="text-gray-300 mb-6 leading-relaxed">
@@ -645,10 +661,9 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white">Home</a></li>
                         <li><a href="#features" class="text-gray-300 hover:text-white">Features</a></li>
                         <li><a href="#reviews" class="text-gray-300 hover:text-white">Social Proof</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white">Contact Support</a></li>
+                        <li><a href="https://www.kassapos.in/contact.html" class="text-gray-300 hover:text-white">Contact Support</a></li>
                     </ul>
                 </div>
                 <div>
