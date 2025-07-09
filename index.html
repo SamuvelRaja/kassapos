@@ -17,6 +17,25 @@
             transform: translateY(0);
         }
         
+        /* Reviews Slider Animation */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-33.333%);
+            }
+        }
+        
+        .animate-scroll {
+            animation: scroll 45s linear infinite;
+            width: max-content;
+        }
+        
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+        
     </style>
 </head>
 <body class="bg-white font-sans text-gray-800 antialiased">
@@ -75,14 +94,14 @@
     <section class="py-12 bg-gray-50 fade-in-section">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-2xl font-bold text-gray-900 mb-4 uppercase tracking-wider">#1 Trusted by 1000+ supermarkets across Tamil Nadu</h3>
-                <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+                <div class="mt-8 flex flex-wrap justify-between items-center gap-8">
                     <!-- Placeholder logos -->
-                    <img src="/images/logos/brownbasket.webp" alt="Retail Brand Logo" class="mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="/images/logos/greenmantra.webp" alt="Retail Brand Logo" class="mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="/images/logos/krt.webp" alt="Tamil Nadu Store Logo" class="mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="/images/logos/shinesupermarket.webp" alt="Retail Brand Logo" class="mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
-                    <img src="/images/logos/tapovana.webp" alt="Retail Brand Logo" class="mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all ">
-                    <img src="/images/logos/vaer.webp" alt="Retail Brand Logo" class="mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all ">
+                    <img src="/images/logos/brownbasket.webp" alt="Retail Brand Logo" class="mx-auto  hover:shadow-md transition-all">
+                    <img src="/images/logos/greenmantra.webp" alt="Retail Brand Logo" class="mx-auto  hover:shadow-md transition-all">
+                    <img src="/images/logos/krt.webp" alt="Tamil Nadu Store Logo" class="mx-auto  hover:shadow-md transition-all">
+                    <img src="/images/logos/shinesupermarket.webp" alt="Retail Brand Logo" class="mx-auto  hover:shadow-md transition-all">
+                    <img src="/images/logos/tapovana.webp" alt="Retail Brand Logo" class="mx-auto  hover:shadow-md transition-all ">
+                    <img src="/images/logos/vaer.webp" alt="Retail Brand Logo" class="mx-auto  hover:shadow-md transition-all ">
                 </div>
             </div>
         </section>
@@ -123,10 +142,10 @@
             </h2>
             <div class="relative max-w-4xl mx-auto my-12">
             <!-- Slider Controls -->
-            <button id="shop-slider-left" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-2xl text-blue-600 hover:bg-blue-50 transition-all focus:outline-none" aria-label="Previous">
+            <button id="shop-slider-left" class="absolute left-0 top-1/2 -translate-y-1/2 z-[999] bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-2xl text-blue-600 hover:bg-blue-50 transition-all focus:outline-none" aria-label="Previous">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <button id="shop-slider-right" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-2xl text-blue-600 hover:bg-blue-50 transition-all focus:outline-none" aria-label="Next">
+            <button id="shop-slider-right" class="absolute right-0 top-1/2 -translate-y-1/2 z-[999] bg-white shadow-md rounded-full w-10 h-10 flex items-center justify-center text-2xl text-blue-600 hover:bg-blue-50 transition-all focus:outline-none" aria-label="Next">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
             <!-- Slider Track -->
@@ -489,11 +508,6 @@
                     Trusted by Supermarkets for Over 7+ Years
                 </h2>
             </div>
-            <div class="flex justify-center">
-                <div class="bg-gray-200 rounded-2xl shadow-lg h-96 w-full max-w-4xl flex items-center justify-center overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?q=80&w=2874&auto=format&fit=crop" alt="Happy customer in a supermarket" class="w-full h-full object-cover">
-                </div>
-            </div>
         </div>
     </section>
 
@@ -503,12 +517,12 @@
             <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
                 Why 1000+ Supermarkets in Tamil Nadu Trust Kassapos
             </h2>
-            <div class="grid md:grid-cols-2 gap-8 mb-16">
-                <div class="bg-white rounded-2xl shadow-lg p-8 transition-transform duration-300 hover:scale-105">
-                    <img src="https://i.imgur.com/example-review-1.png" alt="Customer review 1" class="rounded-lg mb-4">
-                </div>
-                <div class="bg-white rounded-2xl shadow-lg p-8 transition-transform duration-300 hover:scale-105">
-                    <img src="https://i.imgur.com/example-review-2.png" alt="Customer review 2" class="rounded-lg mb-4">
+            <!-- Reviews Slider -->
+            <div class="relative mb-16">
+                <div class="overflow-hidden">
+                    <div id="reviews-slider" class="flex gap-8 animate-scroll">
+                        <!-- Reviews will be populated by JavaScript -->
+                    </div>
                 </div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
@@ -783,69 +797,140 @@
         }
     </script>
     <script>
-  // List your images here (add all 7)
-  const shopImages = [
-    { src: "/images/shops/greenmantrasupermarket.webp", alt: "Green Mantra Supermarket" },
-    { src: "/images/shops/londonsupermarket.webp", alt: "London Supermarket" },
-    { src: "/images/shops/pondysupermarket.webp", alt: "Pondy Supermarket" },
-    { src: "/images/shops/kallakurichisupermarket.webp", alt: "Kallakurichi Supermarket" },
-    { src: "/images/shops/vaersupermarket.webp", alt: "Vaer Supermarket" },
-    { src: "/images/shops/shinesupermarket.webp", alt: "Shine Supermarket" },
-    { src: "/images/shops/tapovanasupermarket.webp", alt: "Tapovana Supermarket" }
-  ];
-
-  let current = 1; // Center image index
-
-  function renderShopSlider() {
-    const track = document.getElementById('shop-slider-track');
-    track.innerHTML = '';
-    const isMobile = window.innerWidth < 768;
-    // Only show 1 on mobile, 3 on desktop
-    let slides = [];
-    if (isMobile) {
-      slides = [current];
-    } else {
-      slides = [
-        (current - 1 + shopImages.length) % shopImages.length,
-        current,
-        (current + 1) % shopImages.length
-      ];
-    }
-    shopImages.forEach((img, idx) => {
-      let classes = "transition-all duration-300 flex-shrink-0";
-      if (isMobile) {
-        classes += idx === current ? " w-full scale-100 opacity-100 z-20" : " hidden";
-      } else {
-        if (idx === slides[1]) {
-          // Center
-          classes += " w-80 md:w-[420px] h-72 md:h-80 mx-2 scale-105 z-20 shadow-2xl";
-        } else if (idx === slides[0] || idx === slides[2]) {
-          // Sides
-          classes += " w-40 md:w-56 h-40 md:h-56 mx-2 scale-90 opacity-80 z-10";
-        } else {
-          classes += " hidden";
+        // Reviews Slider
+        const reviewImages = [];
+        for (let i = 1; i <= 34; i++) {
+            reviewImages.push({
+                src: `/images/reviews/kassapos_review${i}.webp`,
+                alt: `Kassapos Customer Review ${i}`
+            });
         }
-      }
-      track.innerHTML += `
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col ${classes}">
-          <img src="${img.src}" alt="${img.alt}" class="object-cover w-full h-full">
+
+        function initializeReviewsSlider() {
+            const slider = document.getElementById('reviews-slider');
+            if (!slider) return;
+
+            // Create the reviews HTML - single set first
+            const reviewsHTML = reviewImages.map(review => `
+                <div class="flex-shrink-0 bg-white rounded-2xl shadow-lg p-4 w-96 md:w-[500px] lg:w-[600px]">
+                    <img src="${review.src}" alt="${review.alt}" class="rounded-lg w-full h-auto object-contain max-h-[400px] md:max-h-[500px]" loading="lazy">
+                </div>
+            `).join('');
+
+            // Triple the reviews for seamless infinite scrolling
+            slider.innerHTML = reviewsHTML + reviewsHTML + reviewsHTML;
+            
+            // Calculate proper animation duration based on number of images
+            const totalImages = reviewImages.length;
+            const animationDuration = Math.max(100, totalImages * 4); // Minimum 100s, scale with image count (40% slower than previous)
+            slider.style.animationDuration = animationDuration + 's';
+        }
+
+        // Initialize reviews slider when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeReviewsSlider);
+        } else {
+            initializeReviewsSlider();
+        }
+    </script>
+    <script>
+  const shopImages = [
+  { src: "/images/shops/greenmantrasupermarket.webp", alt: "Green Mantra Supermarket" },
+  { src: "/images/shops/londonsupermarket.webp", alt: "London Supermarket" },
+  { src: "/images/shops/nalamangadisupermarket.webp", alt: "Nalamangadi Supermarket" },
+  { src: "/images/shops/rajansupermarket.webp", alt: "Rajan Supermarket" },
+  { src: "/images/shops/spmanosupermarket.webp", alt: "Spmanos Supermarket" },
+  { src: "/images/shops/srikumarssupermarket.webp", alt: "Srikumars Supermarket" },
+  { src: "/images/shops/vibaasupermarket.webp", alt: "Vibaa Supermarket" }
+];
+
+let current = 1; // Center image index
+let shopSliderInterval;
+
+function renderShopSlider() {
+  const track = document.getElementById('shop-slider-track');
+  if (!track) return;
+  
+  track.innerHTML = '';
+  const isMobile = window.innerWidth < 768;
+  
+  if (isMobile) {
+    // Mobile: Show only current image
+    const img = shopImages[current];
+    track.innerHTML = `
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 flex-shrink-0 w-full max-w-xs mx-auto scale-100 opacity-100 z-20">
+        <div class="aspect-[4/3] w-full h-auto flex items-center justify-center bg-gray-100">
+          <img src="${img.src}" alt="${img.alt}" class="object-cover w-full h-full" loading="lazy">
         </div>
-      `;
-    });
+      </div>
+    `;
+  } else {
+    // Desktop: Show 3 images (left, center, right)
+    const leftIdx = (current - 1 + shopImages.length) % shopImages.length;
+    const centerIdx = current;
+    const rightIdx = (current + 1) % shopImages.length;
+    
+    const leftImg = shopImages[leftIdx];
+    const centerImg = shopImages[centerIdx];
+    const rightImg = shopImages[rightIdx];
+    
+    track.innerHTML = `
+      <!-- Left Image -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 flex-shrink-0 w-40 md:w-56 max-w-xs mx-2 scale-90 opacity-80 z-10">
+        <div class="aspect-[4/3] w-full h-auto flex items-center justify-center bg-gray-100">
+          <img src="${leftImg.src}" alt="${leftImg.alt}" class="object-cover w-full h-full" loading="lazy">
+        </div>
+      </div>
+      <!-- Center Image -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 flex-shrink-0 w-80 md:w-[420px] max-w-md mx-2 scale-105 z-20 shadow-2xl">
+        <div class="aspect-[4/3] w-full h-auto flex items-center justify-center bg-gray-100">
+          <img src="${centerImg.src}" alt="${centerImg.alt}" class="object-cover w-full h-full" loading="lazy">
+        </div>
+      </div>
+      <!-- Right Image -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 flex-shrink-0 w-40 md:w-56 max-w-xs mx-2 scale-90 opacity-80 z-10">
+        <div class="aspect-[4/3] w-full h-auto flex items-center justify-center bg-gray-100">
+          <img src="${rightImg.src}" alt="${rightImg.alt}" class="object-cover w-full h-full" loading="lazy">
+        </div>
+      </div>
+    `;
   }
+}
 
-  function moveShopSlider(dir) {
-    const len = shopImages.length;
-    current = (current + dir + len) % len;
-    renderShopSlider();
+function moveShopSlider(dir) {
+  const len = shopImages.length;
+  current = (current + dir + len) % len;
+  renderShopSlider();
+}
+
+function setupShopSlider() {
+  renderShopSlider();
+  const leftBtn = document.getElementById('shop-slider-left');
+  const rightBtn = document.getElementById('shop-slider-right');
+  if (leftBtn && rightBtn) {
+    leftBtn.onclick = function(e) { e.preventDefault(); moveShopSlider(-1); resetShopSliderInterval(); };
+    rightBtn.onclick = function(e) { e.preventDefault(); moveShopSlider(1); resetShopSliderInterval(); };
   }
+  window.addEventListener('resize', renderShopSlider);
+  startShopSliderInterval();
+}
 
-  document.addEventListener('DOMContentLoaded', () => {
-    renderShopSlider();
-    document.getElementById('shop-slider-left').onclick = () => moveShopSlider(-1);
-    document.getElementById('shop-slider-right').onclick = () => moveShopSlider(1);
-    window.addEventListener('resize', renderShopSlider);
-  });
-</script>
+function startShopSliderInterval() {
+  if (shopSliderInterval) clearInterval(shopSliderInterval);
+  shopSliderInterval = setInterval(() => {
+    moveShopSlider(1);
+  }, 2500);
+}
+
+function resetShopSliderInterval() {
+  startShopSliderInterval();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupShopSlider);
+} else {
+  setupShopSlider();
+}
+    </script>
 </body>
 </html>
