@@ -642,53 +642,45 @@
             <form id="demo-form" class="flex flex-col items-center gap-4 max-w-lg mx-auto mb-8 bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-white/20" autocomplete="off">
                 <div class="w-full space-y-4">
                     <div class="relative group">
-                        <input type="text" id="company_name1" name="company_name1" placeholder="Your Name / Store Name" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300" required>
+                        <input type="text" id="name1" name="name1" placeholder="Your Full Name" class="w-full pl-10 pr-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300" required>
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <i class="fas fa-user text-gray-400 text-sm"></i>
                         </div>
-                        <style>
-                            #company_name1 { padding-left: 2.5rem; }
-                        </style>
                     </div>
                     
                     <div class="relative group">
-                        <input type="email" id="email1" name="email1" placeholder="Email Address" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300">
+                        <input type="text" id="company_name1" name="company_name1" placeholder="Store / Company Name" class="w-full pl-10 pr-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300" required>
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <i class="fas fa-store text-gray-400 text-sm"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <input type="email" id="email1" name="email1" placeholder="Email Address" class="w-full pl-10 pr-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300">
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <i class="fas fa-envelope text-gray-400 text-sm"></i>
                         </div>
-                        <style>
-                            #email1 { padding-left: 2.5rem; }
-                        </style>
                     </div>
                     
                     <div class="relative group">
-                        <input type="tel" id="mobile_no1" name="mobile_no1" placeholder="Mobile Number" maxlength="10" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300" required>
+                        <input type="tel" id="mobile_no1" name="mobile_no1" placeholder="Mobile Number" maxlength="10" class="w-full pl-10 pr-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300" required>
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <i class="fas fa-phone text-gray-400 text-sm"></i>
                         </div>
-                        <style>
-                            #mobile_no1 { padding-left: 2.5rem; }
-                        </style>
                     </div>
                     
                     <div class="relative group">
-                        <input type="text" id="subject1" name="subject1" placeholder="Subject (Optional)" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300">
+                        <input type="text" id="subject1" name="subject1" placeholder="Subject (Optional)" class="w-full pl-10 pr-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 group-hover:border-blue-300">
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <i class="fas fa-tag text-gray-400 text-sm"></i>
                         </div>
-                        <style>
-                            #subject1 { padding-left: 2.5rem; }
-                        </style>
                     </div>
                     
                     <div class="relative group">
-                        <textarea id="message1" name="message1" placeholder="Tell us about your store and requirements..." rows="4" class="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 resize-none group-hover:border-blue-300" required></textarea>
+                        <textarea id="message1" name="message1" placeholder="Tell us about your store and requirements..." rows="4" class="w-full pl-10 pr-5 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 outline-none text-gray-800 text-base font-medium transition-all duration-300 bg-white/80 resize-none group-hover:border-blue-300" required></textarea>
                         <div class="absolute top-4 left-0 pl-4 flex items-start pointer-events-none">
                             <i class="fas fa-comment text-gray-400 text-sm mt-1"></i>
                         </div>
-                        <style>
-                            #message1 { padding-left: 2.5rem; }
-                        </style>
                     </div>
                 </div>
                 
@@ -1056,13 +1048,69 @@ if (document.readyState === 'loading') {
 }
     </script>
 
+    <!-- Success Toast Notification -->
+    <div id="success-toast" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 max-w-sm hidden">
+        <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-check-circle text-xl"></i>
+                <div>
+                    <div class="font-semibold">Done! Your free demo is being scheduled.</div>
+                    <div class="text-sm opacity-90">Expect a call from our team within 24 hours.</div>
+                </div>
+            </div>
+            <button onclick="hideToast('success-toast')" aria-label="Close notification" class="ml-4 text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded transition-colors duration-200">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Error Toast Notification -->
+    <div id="error-toast" class="fixed top-4 right-4 bg-red-500 text-white px-6 py-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 max-w-sm hidden">
+        <div class="flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-exclamation-circle text-xl"></i>
+                <div>
+                    <div class="font-semibold">Error!</div>
+                    <div class="text-sm opacity-90" id="error-message">Something went wrong. Please try again.</div>
+                </div>
+            </div>
+            <button onclick="hideToast('error-toast')" aria-label="Close notification" class="ml-4 text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded transition-colors duration-200">
+                <i class="fas fa-times text-lg"></i>
+            </button>
+        </div>
+    </div>
+
     <!-- Form Submission Script -->
     <script>
+        // Toast notification functions
+        function showToast(toastId, duration = 4000) {
+            const toast = $('#' + toastId);
+            // Show the toast and slide it in
+            toast.removeClass('hidden translate-x-full').addClass('translate-x-0');
+            // Auto-hide after duration
+            setTimeout(() => {
+                hideToast(toastId);
+            }, duration);
+        }
+
+        function hideToast(toastId) {
+            const toast = $('#' + toastId);
+            toast.removeClass('translate-x-0').addClass('translate-x-full');
+            // Hide completely after animation
+            setTimeout(() => {
+                toast.addClass('hidden');
+            }, 300);
+        }
+
+        function showError(message) {
+            $('#error-message').text(message);
+            showToast('error-toast');
+        }
+
         $(document).on('click', '#update_btn1', function () {
-            var name = "";        
+            var name = $('#name1').val(); // Personal name
             var email = $('#email1').val();
-        
-            var company_name = $('#company_name1').val();
+            var company_name = $('#company_name1').val(); // Store/Company name
             var mobile_no = $('#mobile_no1').val();
             var subject = $('#subject1').val();
             var message = $('#message1').val();
@@ -1072,47 +1120,52 @@ if (document.readyState === 'loading') {
             var originalText = $btn.html();
             $btn.html('<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...').prop('disabled', true);
 
-            if (company_name == "") {
-                alert("Enter the Name !!!.");
+            if (name == "") {
+                showError("Please enter your full name.");
+                $btn.html(originalText).prop('disabled', false);
+            }
+            else if (company_name == "") {
+                showError("Please enter your store or company name.");
                 $btn.html(originalText).prop('disabled', false);
             }
             else if (mobile_no == "") {
-                alert("Enter the Mobile Number !!!.");
+                showError("Please enter your mobile number.");
                 $btn.html(originalText).prop('disabled', false);
             }
             else if (mobile_no.length != 10) {
-                alert("Invalid Mobile Number !!! Please enter 10 digits.");
+                showError("Please enter a valid 10-digit mobile number.");
                 $btn.html(originalText).prop('disabled', false);
             }      
             else if (message == "") {
-                alert("Enter the Message !!!.");
+                showError("Please tell us about your requirements.");
                 $btn.html(originalText).prop('disabled', false);
             }
             else {
                 $.ajax({
-                    async: false,
-                    url: "https://key.kassapos.in/api/Mail/KassaposMail?Name=" + name + "&Email=" + email + "&CompanyName=" + company_name + "&MobileNo=" + mobile_no + "&Subject=" + subject + "&Msg=" + message + "",				
+                    url: "https://key.kassapos.in/api/Mail/KassaposMail?Name=" + encodeURIComponent(name) + "&Email=" + encodeURIComponent(email) + "&CompanyName=" + encodeURIComponent(company_name) + "&MobileNo=" + encodeURIComponent(mobile_no) + "&Subject=" + encodeURIComponent(subject) + "&Msg=" + encodeURIComponent(message),				
                     type: "POST",
-                    dataType: 'json',
-                    contentType: "application/json; charset=utf-8",
-                    complete: function (data) {
-                        if (data.status == 200) {
-                            // Success - you can redirect to thank you page or show success message
-                            alert("Demo request submitted successfully! We'll contact you soon.");
+                    complete: function (xhr, textStatus) {
+                        // Handle all responses based on status code
+                        if (xhr.status === 200) {
+                            // 200 OK always means success, regardless of response body
+                            showToast('success-toast');
                             // Reset form
                             $('#demo-form')[0].reset();
                             $btn.html(originalText).prop('disabled', false);
-                            // Uncomment next line if you have a thank you page
-                            // window.location.href = "thank-you.html";
-                        }
-                        else {
-                            alert("Something went wrong. Please try again.");
+                        } else {
+                            // Any non-200 status is an error
+                            console.log('Error details:', xhr.status, textStatus, xhr.responseText);
+                            if (xhr.status === 0) {
+                                showError("Network error. Please check your connection and try again.");
+                            } else if (xhr.status >= 400 && xhr.status < 500) {
+                                showError("Invalid request. Please check your information and try again.");
+                            } else if (xhr.status >= 500) {
+                                showError("Server error. Please try again later.");
+                            } else {
+                                showError("Something went wrong. Please try again.");
+                            }
                             $btn.html(originalText).prop('disabled', false);
                         }
-                    },
-                    error: function (error) {
-                        alert("Network error. Please check your connection and try again.");
-                        $btn.html(originalText).prop('disabled', false);
                     }
                 });
             }
